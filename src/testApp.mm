@@ -1,15 +1,25 @@
 #include "testApp.h"
+#include "MyGuiView.h"
+
+MyGuiView * myGuiViewController;
 
 //--------------------------------------------------------------
 void testApp::setup(){
-	ofSetOrientation(OF_ORIENTATION_90_LEFT);
+	//ofSetOrientation(OF_ORIENTATION_90_LEFT);
 
 	ofBackground( 40, 100, 40 );
 
-	// open an outgoing connection to HOST:PORT
-	sender.setup( HOST, PORT );
+	
   
   bTouchDown = false;
+  
+  //Our Gui setup
+	myGuiViewController	= [[MyGuiView alloc] initWithNibName:@"MyGuiView" bundle:nil];
+	[ofxiPhoneGetUIWindow() addSubview:myGuiViewController.view];
+  
+  host = "192.168.60.17";
+  // open an outgoing connection to HOST:PORT
+	sender.setup( host, PORT );
 }
 
 //--------------------------------------------------------------
@@ -43,6 +53,15 @@ void testApp::draw(){
 //--------------------------------------------------------------
 void testApp::exit(){
 
+}
+
+//--------------------------------------------------------------
+void testApp::changeHost(string h){
+  if (h != host){
+    host = h;
+    sender.setup(host, PORT);
+    cout << "Changed host to " << h << endl;
+  }
 }
 
 //--------------------------------------------------------------
@@ -80,7 +99,10 @@ void testApp::touchUp(ofTouchEventArgs &touch){
 
 //--------------------------------------------------------------
 void testApp::touchDoubleTap(ofTouchEventArgs &touch){
-
+  //IF THE VIEW IS HIDDEN LETS BRING IT BACK!
+	if( myGuiViewController.view.hidden ){
+		myGuiViewController.view.hidden = NO;
+	}
 }
 
 //--------------------------------------------------------------

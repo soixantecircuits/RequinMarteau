@@ -5,7 +5,7 @@
 #include "ofxiPhoneExtras.h"
 #include "ofxOsc.h"
 
-#define HOST "192.168.1.101"//"localhost"
+#define HOST "192.168.60.17"//"localhost"
 #define PORT 12345
 
 class testApp : public ofxiPhoneApp {
@@ -27,8 +27,15 @@ class testApp : public ofxiPhoneApp {
 		void gotMemoryWarning();
 		void deviceOrientationChanged(int newOrientation);
 
+    void changeHost(string h);
+  
 		ofxOscSender sender;
     ofPoint      mTouch;
     bool         bTouchDown;
+  
+    float lengthRatio;
+    int numPoints;
+    bool bFill;
+    string host;
 };
 

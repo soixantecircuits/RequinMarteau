@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14BDCAD01504D8C000433212 /* MyGuiView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14BDCACE1504D8C000433212 /* MyGuiView.mm */; };
+		14BDCAD11504D8C000433212 /* MyGuiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14BDCACF1504D8C000433212 /* MyGuiView.xib */; };
 		19604ddadc4ee63146983ca75fd36ac2 /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = c2fac65c491d4231379f3298ec59c6e9 /* ofxOscReceiver.cpp */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -53,6 +55,9 @@
 
 /* Begin PBXFileReference section */
 		00d6d32b84b099226431108cea775a33 /* ofxOsc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxOsc.h; path = ../../../addons/ofxOsc/src/ofxOsc.h; sourceTree = SOURCE_ROOT; };
+		14BDCACD1504D8C000433212 /* MyGuiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGuiView.h; sourceTree = "<group>"; };
+		14BDCACE1504D8C000433212 /* MyGuiView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyGuiView.mm; sourceTree = "<group>"; };
+		14BDCACF1504D8C000433212 /* MyGuiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyGuiView.xib; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* RequinMarteau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RequinMarteau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -113,6 +118,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14BDCACC1504D8C000433212 /* gui */ = {
+			isa = PBXGroup;
+			children = (
+				14BDCACD1504D8C000433212 /* MyGuiView.h */,
+				14BDCACE1504D8C000433212 /* MyGuiView.mm */,
+				14BDCACF1504D8C000433212 /* MyGuiView.xib */,
+			);
+			path = gui;
+			sourceTree = "<group>";
+		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +229,7 @@
 				E4D8936B11527B74007E1F53 /* main.mm */,
 				E4D8936D11527B74007E1F53 /* testApp.mm */,
 				E4D8936C11527B74007E1F53 /* testApp.h */,
+				14BDCACC1504D8C000433212 /* gui */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -315,6 +331,7 @@
 				BB24DDCA10DA781C00E9C588 /* ofxiphone-Info.plist in Resources */,
 				E41D3ED713B38FB500A75A5D /* Project.xcconfig in Resources */,
 				E41D3EE613B3906D00A75A5D /* CoreOF.xcconfig in Resources */,
+				14BDCAD11504D8C000433212 /* MyGuiView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +364,7 @@
 				6b17c11b63257a45f98d6c33cdd23551 /* ofxOscMessage.cpp in Sources */,
 				19604ddadc4ee63146983ca75fd36ac2 /* ofxOscReceiver.cpp in Sources */,
 				3ec627385b50c8e9236d72191daa0e88 /* ofxOscSender.cpp in Sources */,
+				14BDCAD01504D8C000433212 /* MyGuiView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

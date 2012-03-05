@@ -7,7 +7,7 @@
 *.exe
 *.o
 *.so
-
+*.app
 
 # Packages
 ############
@@ -36,3 +36,16 @@
 ehthumbs.db
 Icon?
 Thumbs.db
+
+# OS X cruft #
+##############
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.user
+*.xcworkspace/
+xcuserdata/
+.DS_Store
+
+# Big files #
+*.mov
